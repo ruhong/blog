@@ -1,0 +1,9 @@
+1. px 转 em
+http://pxtoem.com/
+
+2.响应式测试工具
+http://screenqueri.es/   支持localhost
+http://www.responsinator.com/   多种设备显示
+
+3. google font
+http://icodon.com/google-web-font.html

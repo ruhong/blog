@@ -1,0 +1,7 @@
+
+1. 經 Pandoc 擴充後的 Markdown 格式手冊：
+http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown。Pandoc 的 Markdown 格式並不「官方」，這份自行擴充後的 Markdown，顯然被 Pandoc 作者視為得意特色，語法說明書長度比起 Pandoc 其他部份的說明全部加起來都還要多（笑）。
+2. Pandoc 參數說明：
+http://johnmacfarlane.net/pandoc/README.html#options
+3. Pandoc 指令範例：
+http://johnmacfarlane.net/pandoc/demos.html
