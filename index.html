@@ -17,7 +17,9 @@
           <hr>
         </div>
         
-        <div id="container"></div><!-- end container -->
+        <div id="container">
+            
+        </div><!-- end container -->
       </section>
 
     </div>
@@ -31,11 +33,13 @@
 
         $.get("config.json", function(data){
             path = data.path,
-            articles = data.articles,
-            story = articles.story;
+            articles = data.articles;
 
             //讲述类
-            creatList(story);
+            for(var i in articles){
+                creatList(articles[i]);
+            }
+            
         })
 
         function creatList(cates){
