@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>css-rules</title>
+<link rel="stylesheet" href="../../assets/css/github.css">
+<link rel="stylesheet" href="../../assets/css/pygment.css">
+</head>
+<body>
+<div class="container">
+<h3 id="protocol">1. Protocol</h3>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+<span class="fl">.example</span> <span class="kw">{</span>
+  <span class="kw">background:</span> <span class="dt">url(</span>http://www<span class="dt">.</span>google<span class="dt">.</span>com/images/example<span class="dt">)</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="co">/* Recommended */</span>
+<span class="fl">.example</span> <span class="kw">{</span>
+  <span class="kw">background:</span> <span class="dt">url(</span>//www<span class="dt">.</span>google<span class="dt">.</span>com/images/example<span class="dt">)</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre>
+<h3 id="capitalization">2. Capitalization</h3>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+color<span class="dv">:</span> <span class="fl">#E5E5E5</span>;
+
+<span class="co">/* Recommended */</span>
+color<span class="dv">:</span> <span class="fl">#e5e5e5</span>;</code></pre>
+<h3 id="css-validity">3. CSS Validity</h3>
+<blockquote>
+<p>Use valid CSS where possible. <a href="http://jigsaw.w3.org/css-validator/">W3C CSS validator</a></p>
+</blockquote>
+<h3 id="id-and-class-naming">4. ID and Class Naming</h3>
+<blockquote>
+<p>Use meaningful or generic ID and class names.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended: meaningless */</span>
+<span class="fl">#yee-1901</span> <span class="kw">{}</span>
+
+<span class="co">/* Not recommended: presentational */</span>
+<span class="fl">.button-green</span> <span class="kw">{}</span>
+<span class="fl">.clear</span> <span class="kw">{}</span>
+
+<span class="co">/* Recommended: specific */</span>
+<span class="fl">#gallery</span> <span class="kw">{}</span>
+<span class="fl">#login</span> <span class="kw">{}</span>
+<span class="fl">.video</span> <span class="kw">{}</span>
+
+<span class="co">/* Recommended: generic */</span>
+<span class="fl">.aux</span> <span class="kw">{}</span>
+<span class="fl">.alt</span> <span class="kw">{}</span></code></pre>
+<h3 id="id-and-class-name-style">5. ID and Class Name Style</h3>
+<blockquote>
+<p>Use ID and class names that are as short as possible but as long as necessary.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+<span class="fl">#navigation</span> <span class="kw">{}</span>
+<span class="fl">.atr</span> <span class="kw">{}</span>
+
+<span class="co">/* Recommended */</span>
+<span class="fl">#nav</span> <span class="kw">{}</span>
+<span class="fl">.author</span> <span class="kw">{}</span></code></pre>
+<h3 id="type-selectors">6. Type Selectors</h3>
+<blockquote>
+<p>Avoid qualifying ID and class names with type selectors.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+ul<span class="fl">#example</span> <span class="kw">{}</span>
+div<span class="fl">.error</span> <span class="kw">{}</span>
+
+<span class="co">/* Recommended */</span>
+<span class="fl">#example</span> <span class="kw">{}</span>
+<span class="fl">.error</span> <span class="kw">{}</span></code></pre>
+<h3 id="shorthand-properties">7. Shorthand Properties</h3>
+<blockquote>
+<p>Use shorthand properties where possible.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+border-top-style<span class="dv">:</span> none;
+font-family<span class="dv">:</span> palatino, georgia, serif;
+font-size<span class="dv">:</span> 100%;
+line-height<span class="dv">:</span> 1<span class="fl">.6</span>;
+padding-bottom<span class="dv">:</span> 2em;
+padding-left<span class="dv">:</span> 1em;
+padding-right<span class="dv">:</span> 1em;
+padding-top<span class="dv">:</span> 0;
+
+<span class="co">/* Recommended */</span>
+border-top<span class="dv">:</span> 0;
+font<span class="dv">:</span> 100%/1<span class="fl">.6</span> palatino, georgia, serif;
+padding<span class="dv">:</span> 0 1em 2em;</code></pre>
+<h3 id="units-and-0">8. Units and 0</h3>
+<blockquote>
+<p>Omit unit specification after “0” values.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Recommended */</span>
+margin<span class="dv">:</span> 0;
+padding<span class="dv">:</span> 0;</code></pre>
+<h3 id="leading-0s">9. Leading 0s</h3>
+<blockquote>
+<p>Omit leading “0”s in values.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Recommended */</span>
+font-size<span class="dv">:</span> <span class="fl">.8em</span>;</code></pre>
+<h3 id="hexadecimal-notation">10. Hexadecimal Notation</h3>
+<blockquote>
+<p>Use 3 character hexadecimal notation where possible.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+color<span class="dv">:</span> <span class="fl">#eebbcc</span>;
+
+<span class="co">/* Recommended */</span>
+color<span class="dv">:</span> <span class="fl">#ebc</span>;</code></pre>
+<h3 id="id-and-class-name-delimiters">11. ID and Class Name Delimiters</h3>
+<blockquote>
+<p>Separate words in ID and class names by a hyphen.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended: does not separate the words “demo” and “image” */</span>
+<span class="fl">.demoimage</span> <span class="kw">{}</span>
+
+<span class="co">/* Not recommended: uses underscore instead of hyphen */</span>
+<span class="fl">.error_status</span> <span class="kw">{}</span>
+
+<span class="co">/* Recommended */</span>
+<span class="fl">#video-id</span> <span class="kw">{}</span>
+<span class="fl">.ads-sample</span> <span class="kw">{}</span></code></pre>
+<h3 id="declaration-stops">12. Declaration Stops</h3>
+<blockquote>
+<p>Use a semicolon after every declaration.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+<span class="fl">.test</span> <span class="kw">{</span>
+  <span class="kw">display:</span> <span class="dt">block</span><span class="kw">;</span>
+  <span class="kw">height:</span> <span class="dt">100px</span>
+<span class="kw">}</span>
+<span class="co">/* Recommended */</span>
+<span class="fl">.test</span> <span class="kw">{</span>
+  <span class="kw">display:</span> <span class="dt">block</span><span class="kw">;</span>
+  <span class="kw">height:</span> <span class="dt">100px</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre>
+<h3 id="property-name-stops">13. Property Name Stops</h3>
+<blockquote>
+<p>Use a space after a property name’s colon.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+h3 <span class="kw">{</span>
+  <span class="kw">font-weight:</span><span class="dt">bold</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="co">/* Recommended */</span>
+h3 <span class="kw">{</span>
+  <span class="kw">font-weight:</span> <span class="dt">bold</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre>
+<h3 id="declaration-block-separation">14. Declaration Block Separation</h3>
+<blockquote>
+<p>Use a space between the last selector and the declaration block.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended: missing space */</span>
+<span class="fl">#video</span><span class="kw">{</span>
+  <span class="kw">margin-top:</span> <span class="dt">1em</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="co">/* Not recommended: unnecessary line break */</span>
+<span class="fl">#video</span>
+<span class="kw">{</span>
+  <span class="kw">margin-top:</span> <span class="dt">1em</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="co">/* Recommended */</span>
+<span class="fl">#video</span> <span class="kw">{</span>
+  <span class="kw">margin-top:</span> <span class="dt">1em</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre>
+<h3 id="selector-and-declaration-separation">15. Selector and Declaration Separation</h3>
+<blockquote>
+<p>Separate selectors and declarations by new lines.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+a<span class="dv">:focus</span>, a<span class="dv">:active</span> <span class="kw">{</span>
+  <span class="kw">position:</span> <span class="dt">relative</span><span class="kw">;</span> <span class="kw">top:</span> <span class="dt">1px</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="co">/* Recommended */</span>
+h1,
+h2,
+h3 <span class="kw">{</span>
+  <span class="kw">font-weight:</span> <span class="dt">normal</span><span class="kw">;</span>
+  <span class="kw">line-height:</span> <span class="dt">1.2</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="fl">###</span> 16<span class="fl">.</span> Rule Separation
+&gt; Separate rules by new lines<span class="fl">.</span>
+
+html <span class="kw">{</span>
+  <span class="kw">background:</span> <span class="dt">#fff</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+body <span class="kw">{</span>
+  <span class="kw">margin:</span> <span class="dt">auto</span><span class="kw">;</span>
+  <span class="kw">width:</span> <span class="dt">50%</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre>
+<h3 id="css-quotation-marks">17. CSS Quotation Marks</h3>
+<blockquote>
+<p>Use single quotation marks for attribute selectors and property values.</p>
+</blockquote>
+<pre class="sourceCode css"><code class="sourceCode css"><span class="co">/* Not recommended */</span>
+<span class="dv">@import</span> url(<span class="st">&quot;//www.google.com/css/maia.css&quot;</span>)<span class="dv">;</span>
+
+html <span class="kw">{</span>
+  <span class="kw">font-family:</span> <span class="st">&quot;open sans&quot;</span>, arial, <span class="dt">sans-serif</span><span class="kw">;</span>
+<span class="kw">}</span>
+
+<span class="co">/* Recommended */</span>
+<span class="dv">@import</span> url(//www<span class="dt">.</span>google<span class="dt">.</span>com/css/maia<span class="dt">.</span>css)<span class="dv">;</span>
+
+html <span class="kw">{</span>
+  <span class="kw">font-family:</span> <span class="st">&#39;open sans&#39;</span>, arial, <span class="dt">sans-serif</span><span class="kw">;</span>
+<span class="kw">}</span></code></pre>
+</div>
+
+</body>
+</html>
