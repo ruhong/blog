@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>wenhong's blog</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
   <body>
@@ -17,14 +17,45 @@
           <hr>
         </div>
         
-        <div id="container">
-            <ul>
-              <li><a href="employee.html" target="_blank">致员工</a></li>
-            </ul>
-        </div><!-- end container -->
+        <div id="container"></div><!-- end container -->
       </section>
 
     </div>
+
+    <script src="assets/lib/jquery-1.8.2.min.js"></script>
+    <script>
+        var path,
+            articles,
+            story,
+            $con = $('#container');
+
+        $.get("config.json", function(data){
+            path = data.path,
+            articles = data.articles,
+            story = articles.story;
+
+            //讲述类
+            creatList(story);
+        })
+
+        function creatList(cates){
+            var str = '';
+            str += '<ul>';
+
+            for(var date_cate in cates){
+                var items = cates[date_cate];
+                for(var index in items){
+                    var art_url = path+date_cate+'-'+items[index];
+                    str += '<li><a href="'+art_url+'" target="_blank">'+index+'</a></li>'
+                }
+                
+            }
+
+            str += '</ul>'
+
+            $con.append(str);
+        }
+    </script>
     
   </body>
 </html>
