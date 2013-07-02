@@ -1,0 +1,5 @@
+{
+  // Sets the path to the pandoc binary.
+  "pandoc-path": "C:/Users/Tan/AppData/Local/Pandoc"
+
+}
