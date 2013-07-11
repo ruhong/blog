@@ -5,14 +5,13 @@
             "2013-6-26": {"致员工": "to-employee.html"}
         },
         "technology": {
-<<<<<<< HEAD
-            "2013-6-26": {
-=======
             "2013-6-27": {
->>>>>>> 39561d811d5304a713d4c308988c2306691ff0a8
                 "css规范": "google-css-rule.html",
                 "html规范": "google-html-rule.html"
-            }
+            },
+			"2013-7-10": {
+				"推荐使用的3种js继承方法": "2013-7-10-js-object-inherit.html" 
+			}
         }
 
     } 
