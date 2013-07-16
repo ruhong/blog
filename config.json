@@ -9,6 +9,9 @@
                 "css规范": "google-css-rule.html",
                 "html规范": "google-html-rule.html"
             },
+			"2013-6-30": {
+				"javascript规范": "google-js-rule"
+			},
 			"2013-7-10": {
 				"推荐使用的3种js继承方法": "js-object-inherit.html"
 			},
